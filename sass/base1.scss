@@ -1,0 +1,295 @@
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$title: #252B42;
+$description: #737373;
+$white: #fff;
+$font: "Montserrat", sans-serif;
+
+@mixin text($fw, $fz, $ln, $ls, $color) {
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $ln;
+    letter-spacing: $ls;
+    color: $color;
+    text-align: center;
+}
+
+%block {
+    width: 230px;
+    height: 209px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main {
+    font-family: $font;
+    background-color: #F0F0F0;
+}
+
+.benefits {
+    width: 1440px;
+    height: 526px;
+    background-color: #A784C2;
+    margin: auto;
+    @media (max-width:414px){
+        width: 414px;
+        height: 1421px;
+        background-color: #f3f3f3;
+    }
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.title {
+    @include text(700, 40px, 142%, 0.01em, $title);
+
+    @media (max-width:414px) {
+        width: 258px;
+        margin: auto;
+    }
+}
+
+.title-2{
+    @include text(700, 40px, 142%, 0.01em, $title);
+
+    @media (max-width:414px) {
+        width: 258px;
+        
+    }
+}
+
+.description {
+    @include text(500, 14px, 143%, 0.01em, $description);
+
+    @media (max-width:414px) {
+        width: 225px;
+    }
+
+    width: 511px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.benefits__blocks {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:414px) {
+        width: 330px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-top: 75px;
+    }
+
+    .block {
+        @extend %block;
+
+        h5 {
+            @include text(700, 16px, 150%, 0.01em, $description)
+        }
+    }
+}
+
+.subtitle_desktop{
+    display: block;
+    @media screen and (max-width: 414px){
+        display: none;
+    }
+}
+.subtitle_mobile{
+    display: none;
+    @media screen and (max-width: 414px){
+        display: block;
+    }
+}
+
+.advices {
+    width: 1440px;
+    height: 699px;
+    background-color: #C7BEBE;
+    margin: auto;
+    @media (max-width:414px){
+        background-color: #B7A1A1;
+        width: 414px;
+        height: 1898px;
+    }
+        &__blocks {
+            margin-top: 45px;
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width:414px) {
+                width: 330px;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin: auto;
+                margin-top: 75px;
+            }
+
+            .block {
+                width: 230px;
+                height: 342px;
+                background-color: white;
+
+                h5 {
+                    @include text(700, 16px, 150%, 0.01em, $title);
+                    text-align: left;
+                    padding-top: 30px;
+                    padding-left: 30px;
+                }
+
+                p {
+                    @include text(500, 14px, 143%, 0.01em, $description);
+                    text-align: left;
+                    padding-top: 15px;
+                    padding-left: 30px;
+                }
+
+                img {
+                    padding-top: 30px;
+                }
+        }
+    }
+}
+
+// .description-1 {
+//     @include text(500, 14px, 143%, 0.01em, $description);
+
+//     @media (max-width:414px) {
+//         width: 240px;
+//     }
+
+//     width: 511px;
+//     margin: auto;
+//     padding-top: 10px;
+// }
+.content {
+    max-width: 1050px;
+    margin: auto;
+    padding-top: 125px;
+}
+
+.block1 {
+    width: 230px;
+    height: 321px;
+    background-color: white;
+
+    h5 {
+        @include text(700, 16px, 150%, 0.01em, $title);
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    p {
+        @include text(500, 14px, 143%, 0.01em, $description);
+        text-align: left;
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+
+    img {
+        padding-top: 30px;
+    }
+}
+.services{
+    width: 1440px;
+    height: 911px;
+    background-color: white;
+    margin: auto;
+    @media (max-width:414px){
+        width: 414px;
+        height: 1493px;
+
+    }
+        &__blocks{
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width:414px){
+                width: 330px;
+                flex-direction: column;
+                align-items: center;
+                
+                flex-wrap: wrap;
+                margin: auto;
+            }
+            .big-image{
+                @media (max-width:414px){
+                    width: 333px;
+                    height: 442px;
+                }
+            }
+        }
+        .block{
+            width: 333px;
+            height: 438px;
+            .subtitle{
+                @include text(700, 40px, 142%, 0.01em, $title);
+                text-align: left;
+                padding-top: 20px;
+            }
+            p{
+                @include text(500, 14px, 143%, 0.01em, $description);
+                text-align: left;
+                padding-top: 10px;
+            }
+            .sub_block{
+                display: flex;
+                gap: 18px;
+                padding-top: 30px;
+                img{
+                    padding-bottom: 20px;
+                }
+                .inner-text{
+                    height: 77px;
+                    .primary-text{
+                        @include text(700, 16px, 150%, 0.01em, $title);
+                        text-align: left;
+                    }
+                    .secondary-text{
+                        @include text(600, 14px, 171%, 0.01em, $description);
+                        text-align: left;
+                    }
+                }
+            }
+    }
+}
+.stand{
+    max-width: 1050px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.title-1_desktop{
+    @include text(700, 40px, 142%, 0.01em, $title);
+    display: block;
+    @media screen and (max-width: 414px){
+        display: none;
+    }
+}
+
+.title-1_mobile{
+    @include text(700, 40px, 57px, 0.2px, $title);
+    display: none;
+    @media screen and (max-width: 414px){
+        display: block;
+        height: 171px;
+        margin: auto;
+    }
+}
